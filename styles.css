@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #e2e2e2, #ffffff);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #f9f9f9;
+}
+
+h1, h2, h3 {
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+h1 { animation-delay: 0.2s; }
+h2 { animation-delay: 0.4s; }
+h3 { animation-delay: 0.6s; }
+
+section {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    opacity: 0;
+    animation: slideIn 0.8s forwards, fadeIn 0.8s forwards;
+}
+
+section:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px) scale(1.02);
+}
+
+.checklist {
+    margin: 15px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.checklist li {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.checklist li:hover {
+    background-color: #f0f8e8;
+}
+
+.checklist li input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
+
+.checklist li input[type="checkbox"]:checked {
+    animation: bounce 0.3s forwards;
+}
+
+.hidden {
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+td:hover {
+    background-color: #f1f1f1;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #4CAF50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        display: block;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        margin: 10px;
+    }
+
+    select, button {
+        width: auto;
+    }
+}
+
+/* Additional styles for better aesthetics */
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    color: #4CAF50;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #333;
+}
